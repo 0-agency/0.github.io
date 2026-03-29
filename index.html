@@ -1,3 +1,57 @@
-<h1>0.github.io | Institutional Lead Generation</h1>
-<p>We provide high-scale referral services for Fintech and Debt Settlement.</p>
-<p>Contact: @AranvoOps</p>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debt Settlement Calculator | Institutional Audit</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 500px; margin: 40px auto; padding: 20px; background-color: #f4f7f9; }
+        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-top: 5px solid #004a99; }
+        h1 { color: #004a99; font-size: 1.5rem; margin-bottom: 10px; text-align: center; }
+        p.sub { text-align: center; color: #666; font-size: 0.9rem; margin-bottom: 25px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; color: #555; }
+        input { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; font-size: 1rem; }
+        button { background: #28a745; color: white; padding: 15px; width: 100%; border: none; border-radius: 6px; cursor: pointer; font-size: 1.1rem; font-weight: bold; transition: background 0.2s; }
+        button:hover { background: #218838; }
+        .result-box { margin-top: 25px; padding: 20px; background: #e9f7ef; border-radius: 8px; border: 1px solid #c3e6cb; display: none; text-align: center; }
+        .result-text { font-size: 1.3rem; color: #155724; font-weight: bold; }
+        .cta-section { margin-top: 20px; display: none; text-align: center; }
+        .cta-btn { background: #004a99; color: white; text-decoration: none; padding: 12px 25px; border-radius: 6px; display: inline-block; font-weight: bold; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Aranvo Debt Audit</h1>
+        <p class="sub">Institutional Settlement Estimator (USA/Global)</p>
+        
+        <label>Total Unsecured Debt ($):</label>
+        <input type="number" id="debtInput" placeholder="Enter amount, e.g. 25000">
+        
+        <button onclick="calc()">Estimate My Settlement</button>
+
+        <div id="resultBox" class="result-box">
+            <div id="savingsText" class="result-text"></div>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #666;">*Based on average 50% industry reduction.</p>
+        </div>
+
+        <div id="ctaSection" class="cta-section">
+            <p><strong>Ready to lock in these savings?</strong></p>
+            <p style="font-size: 0.9rem;">Speak with an Aranvo settlement specialist.</p>
+            <a href="https://t.me/AranvoOps" class="cta-btn">Contact @AranvoOps</a>
+        </div>
+    </div>
+
+    <script>
+        function calc() {
+            const amount = document.getElementById('debtInput').value;
+            if (amount > 0) {
+                const settled = amount * 0.5;
+                document.getElementById('savingsText').innerText = "Potential Settlement: $" + settled.toLocaleString();
+                document.getElementById('resultBox').style.display = 'block';
+                document.getElementById('ctaSection').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
